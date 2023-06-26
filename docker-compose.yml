@@ -1,0 +1,16 @@
+version: '3'
+services:
+  challenge:
+    build: .
+    restart: always
+    ports:
+      - 3000:3000
+    environment:
+      - NODE_ENV=development
+      - DB_HOST=localhost
+      - DB_PORT=1433
+      - DB_PASS=ranKeyStrong(!)Password
+      - DB_NAME=tcc
+      - DB_LOGGING=true
+      - DB_SYNC=true
+      - FIREBASE_PROJECT_API_KEY=AIzaSyCU3ovmnCSjsJZxyDb7H9J7MCh_Quzf2vY
