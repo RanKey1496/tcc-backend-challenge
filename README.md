@@ -12,6 +12,10 @@ Un microservicio que cuenta con una autenticacion, adicional de esto permite hac
 
 Se crea un API en NodeJS con Express, utilizando TypeORM para conectarse a la base de datos SQL Server, adicionalmente se conecta con Firebase para realizar la autenticación.
 
+![plot](./diagram.png)
+
+***Se adjunta las historias de usuario en el archivo "historias de usuario.xlsx"***
+
 
 ## Correr el proyecto
 
