@@ -1,0 +1,920 @@
+{
+	"info": {
+		"_postman_id": "e75059d9-ab2e-4454-bd6e-174b4d6f08cf",
+		"name": "Clientes",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "661675",
+		"_collection_link": "https://crimson-crescent-251227.postman.co/workspace/New-Team-Workspace~41a4e77b-3627-4347-8c82-9f6675302f1b/collection/661675-e75059d9-ab2e-4454-bd6e-174b4d6f08cf?action=share&creator=661675&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"jhongil96@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://64.227.8.154:3000/login",
+					"protocol": "http",
+					"host": [
+						"64",
+						"227",
+						"8",
+						"154"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"jhongil96@gmail.com\",\r\n    \"password\": \"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "957"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"3bd-c3n+vGbdTo7iXijFvlBQkbFQetk\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 26 Jun 2023 21:07:13 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"success\": true,\n    \"data\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6ImY5N2U3ZWVlY2YwMWM4MDhiZjRhYjkzOTczNDBiZmIyOTgyZTg0NzUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFua3Vpc2gtOTg1MDEiLCJhdWQiOiJiYW5rdWlzaC05ODUwMSIsImF1dGhfdGltZSI6MTY4NzgxMzg3MywidXNlcl9pZCI6IjYxdW1udGpTb3lQOERkbG5iajlrdFdCSEd3NTMiLCJzdWIiOiI2MXVtbnRqU295UDhEZGxuYmo5a3RXQkhHdzUzIiwiaWF0IjoxNjg3ODEzODczLCJleHAiOjE2ODc4MTc0NzMsImVtYWlsIjoiamhvbmdpbDk2QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImpob25naWw5NkBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.FydsPhRLkh74oTVTMot_Xr8nOqYYkBk85tz6khfXXK45suCOsqalQJrNDmeahIriMm9HxBANaPOpZH5ZmMhQMzButBwVFzl4z3S7UpO_N8azUvQ8pK_uG7BYXIr7r9qpF1URm7jCs6uB4unTy9BH5rj7ni5NEkAu8IJLwWKJP5yWg11vG9CyCsmsYxVmRV2S_y2qaLoBKGBEGLMAv9zIS3LXxB5EWVkdhKTgb6Gw2LOXi2K6Q58_BUzGAhgGXlOZ2F-wK50lOXekXffPweeDI2DOwAckJsq4obDwm-fQQUwyxJ-eDYXw0wBipIsWigR5veSmgvRT6IYLWT-02UZHbQ\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Obtener todos los clientes",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImY5N2U3ZWVlY2YwMWM4MDhiZjRhYjkzOTczNDBiZmIyOTgyZTg0NzUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFua3Vpc2gtOTg1MDEiLCJhdWQiOiJiYW5rdWlzaC05ODUwMSIsImF1dGhfdGltZSI6MTY4NzgxMjU4NCwidXNlcl9pZCI6IjYxdW1udGpTb3lQOERkbG5iajlrdFdCSEd3NTMiLCJzdWIiOiI2MXVtbnRqU295UDhEZGxuYmo5a3RXQkhHdzUzIiwiaWF0IjoxNjg3ODEyNTg0LCJleHAiOjE2ODc4MTYxODQsImVtYWlsIjoiamhvbmdpbDk2QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImpob25naWw5NkBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.OulwDTapha2LCQ95BQH7TXB1rgvUloe5EUKPb5GWyT2bC3cevYuVUzMedczQWfK2jCzdzgjfEv-a7IvX2bxg8Z66DfhwhD4C309UeHLjlb-7ptH1RZCQ-pOAN1Sa118qmhW2SHP7tYO15_58a03AIomsSWmtaJNzLNblS1zmoVSmHe0ih6_FtV_yS_uq7D3bas4KF7I4kFimCGRyq-e-nxYOe9uqHK_072tZb9MZCIaG5RjL-0hRGab78PnLjbOHvzFFox65ZPbQ4Glz7s2gaLTd7b1odTCN5oy3azluRxkorbf-LAZp9SBMWC-zpZeKAUVtfyPKcePX3HVDSUUuEw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://64.227.8.154:3000/client/",
+					"protocol": "http",
+					"host": [
+						"64",
+						"227",
+						"8",
+						"154"
+					],
+					"port": "3000",
+					"path": [
+						"client",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener todos",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/client/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"client",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "281"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"119-K33NtUQb0HHL3spDL3axoJb6jQc\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 26 Jun 2023 21:04:54 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"success\": true,\n    \"data\": [\n        {\n            \"identification\": \"1039290068\",\n            \"identificationType\": \"Cédula Ciudadania\",\n            \"name\": \"Jhon Gil 4\",\n            \"gender\": \"Masculino\"\n        },\n        {\n            \"identification\": \"1039290069\",\n            \"identificationType\": \"Cédula Ciudadania\",\n            \"name\": \"Luz Mery Sepulveda Durango\",\n            \"gender\": \"Femenino\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Obtener un cliente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImY5N2U3ZWVlY2YwMWM4MDhiZjRhYjkzOTczNDBiZmIyOTgyZTg0NzUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFua3Vpc2gtOTg1MDEiLCJhdWQiOiJiYW5rdWlzaC05ODUwMSIsImF1dGhfdGltZSI6MTY4Nzc5NDc2MywidXNlcl9pZCI6IjYxdW1udGpTb3lQOERkbG5iajlrdFdCSEd3NTMiLCJzdWIiOiI2MXVtbnRqU295UDhEZGxuYmo5a3RXQkhHdzUzIiwiaWF0IjoxNjg3Nzk0NzYzLCJleHAiOjE2ODc3OTgzNjMsImVtYWlsIjoiamhvbmdpbDk2QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImpob25naWw5NkBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.WuXHBO5GAL_Xxsb0iZ64Mg7j_e5Fgjy33m3-juGwqiW4JAZxA_gu5-z8Qsauu1NwiHwgzs6R2_xE7DRjcA7YNgzrgoGkBtksyuBVc8aTQL_dtsXQ9zd_8Mv0whQ216YAibalcTyRMOsLmo4jn1iswuv0CYjcNeDIjNyhhV0mV1fYb8tZAOxx8KHlbrWeKb0VfHBxpHWXVrYoAurSeIar5mPvMV9PVhJKQHuvgh1Z4cp5D_FS8nZU4iF674Dz9jXWQOdPCfrMPKr8lCO0DhTw42buPNFMDOgtF11-QMNgWsKthNKtToJP5EDvB4EZhyh-HMGezfqoN8CnPWsmYxkttg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://64.227.8.154:3000/client/1039290068?identificationType=CC",
+					"protocol": "http",
+					"host": [
+						"64",
+						"227",
+						"8",
+						"154"
+					],
+					"port": "3000",
+					"path": [
+						"client",
+						"1039290068"
+					],
+					"query": [
+						{
+							"key": "identificationType",
+							"value": "CC"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Obtener un cliente",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/client/1039290068?identificationType=CC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"client",
+								"1039290068"
+							],
+							"query": [
+								{
+									"key": "identificationType",
+									"value": "CC"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "149"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"95-fUzYdhO7QmpGJk/2Wmr/BkWONr4\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 26 Jun 2023 15:54:41 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"success\": true,\n    \"data\": {\n        \"identificacion\": \"1039290068\",\n        \"tipoIdentificacion\": \"Cédula Ciudadania\",\n        \"nombre\": \"Jhon Gil\",\n        \"genero\": \"Masculino\"\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "Guardar cliente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImY5N2U3ZWVlY2YwMWM4MDhiZjRhYjkzOTczNDBiZmIyOTgyZTg0NzUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFua3Vpc2gtOTg1MDEiLCJhdWQiOiJiYW5rdWlzaC05ODUwMSIsImF1dGhfdGltZSI6MTY4NzgxMjU4NCwidXNlcl9pZCI6IjYxdW1udGpTb3lQOERkbG5iajlrdFdCSEd3NTMiLCJzdWIiOiI2MXVtbnRqU295UDhEZGxuYmo5a3RXQkhHdzUzIiwiaWF0IjoxNjg3ODEyNTg0LCJleHAiOjE2ODc4MTYxODQsImVtYWlsIjoiamhvbmdpbDk2QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImpob25naWw5NkBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.OulwDTapha2LCQ95BQH7TXB1rgvUloe5EUKPb5GWyT2bC3cevYuVUzMedczQWfK2jCzdzgjfEv-a7IvX2bxg8Z66DfhwhD4C309UeHLjlb-7ptH1RZCQ-pOAN1Sa118qmhW2SHP7tYO15_58a03AIomsSWmtaJNzLNblS1zmoVSmHe0ih6_FtV_yS_uq7D3bas4KF7I4kFimCGRyq-e-nxYOe9uqHK_072tZb9MZCIaG5RjL-0hRGab78PnLjbOHvzFFox65ZPbQ4Glz7s2gaLTd7b1odTCN5oy3azluRxkorbf-LAZp9SBMWC-zpZeKAUVtfyPKcePX3HVDSUUuEw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identification\": \"1039290069\",\r\n    \"identificationType\": \"Cédula Ciudadania\",\r\n    \"name\": \"Jhon Gil\",\r\n    \"gender\": \"Masculino\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://64.227.8.154:3000/client/",
+					"protocol": "http",
+					"host": [
+						"64",
+						"227",
+						"8",
+						"154"
+					],
+					"port": "3000",
+					"path": [
+						"client",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Guardar cliente",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"identification\": \"1039290069\",\r\n    \"identificationType\": \"Cédula Ciudadania\",\r\n    \"name\": \"Jhon Gil\",\r\n    \"gender\": \"Masculino\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/client/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"client",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "66"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"42-TyEgliaXqi9pmodpBoihuUbtYZ8\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 26 Jun 2023 21:04:24 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"success\": true,\n    \"data\": \"Cliente guardado exitosamente\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Actualizar cliente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImY5N2U3ZWVlY2YwMWM4MDhiZjRhYjkzOTczNDBiZmIyOTgyZTg0NzUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFua3Vpc2gtOTg1MDEiLCJhdWQiOiJiYW5rdWlzaC05ODUwMSIsImF1dGhfdGltZSI6MTY4NzgxMjU4NCwidXNlcl9pZCI6IjYxdW1udGpTb3lQOERkbG5iajlrdFdCSEd3NTMiLCJzdWIiOiI2MXVtbnRqU295UDhEZGxuYmo5a3RXQkhHdzUzIiwiaWF0IjoxNjg3ODEyNTg0LCJleHAiOjE2ODc4MTYxODQsImVtYWlsIjoiamhvbmdpbDk2QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImpob25naWw5NkBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.OulwDTapha2LCQ95BQH7TXB1rgvUloe5EUKPb5GWyT2bC3cevYuVUzMedczQWfK2jCzdzgjfEv-a7IvX2bxg8Z66DfhwhD4C309UeHLjlb-7ptH1RZCQ-pOAN1Sa118qmhW2SHP7tYO15_58a03AIomsSWmtaJNzLNblS1zmoVSmHe0ih6_FtV_yS_uq7D3bas4KF7I4kFimCGRyq-e-nxYOe9uqHK_072tZb9MZCIaG5RjL-0hRGab78PnLjbOHvzFFox65ZPbQ4Glz7s2gaLTd7b1odTCN5oy3azluRxkorbf-LAZp9SBMWC-zpZeKAUVtfyPKcePX3HVDSUUuEw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"identification\": \"1039290069\",\r\n    \"identificationType\": \"Cédula Ciudadania\",\r\n    \"name\": \"Luz Mery Sepulveda Durango\",\r\n    \"gender\": \"Femenino\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://64.227.8.154:3000/client/",
+					"protocol": "http",
+					"host": [
+						"64",
+						"227",
+						"8",
+						"154"
+					],
+					"port": "3000",
+					"path": [
+						"client",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Actualizar cliente",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"identification\": \"1039290069\",\r\n    \"identificationType\": \"Cédula Ciudadania\",\r\n    \"name\": \"Luz Mery Sepulveda Durango\",\r\n    \"gender\": \"Femenino\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/client/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"client",
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "69"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"45-u2mxSGGOkMQ/ogvfpgv5j6yqfk8\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 26 Jun 2023 21:04:51 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"success\": true,\n    \"data\": \"Cliente actualizado exitosamente\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Eliminar cliente",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImY5N2U3ZWVlY2YwMWM4MDhiZjRhYjkzOTczNDBiZmIyOTgyZTg0NzUiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL3NlY3VyZXRva2VuLmdvb2dsZS5jb20vYmFua3Vpc2gtOTg1MDEiLCJhdWQiOiJiYW5rdWlzaC05ODUwMSIsImF1dGhfdGltZSI6MTY4NzgxMjU4NCwidXNlcl9pZCI6IjYxdW1udGpTb3lQOERkbG5iajlrdFdCSEd3NTMiLCJzdWIiOiI2MXVtbnRqU295UDhEZGxuYmo5a3RXQkhHdzUzIiwiaWF0IjoxNjg3ODEyNTg0LCJleHAiOjE2ODc4MTYxODQsImVtYWlsIjoiamhvbmdpbDk2QGdtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmaXJlYmFzZSI6eyJpZGVudGl0aWVzIjp7ImVtYWlsIjpbImpob25naWw5NkBnbWFpbC5jb20iXX0sInNpZ25faW5fcHJvdmlkZXIiOiJwYXNzd29yZCJ9fQ.OulwDTapha2LCQ95BQH7TXB1rgvUloe5EUKPb5GWyT2bC3cevYuVUzMedczQWfK2jCzdzgjfEv-a7IvX2bxg8Z66DfhwhD4C309UeHLjlb-7ptH1RZCQ-pOAN1Sa118qmhW2SHP7tYO15_58a03AIomsSWmtaJNzLNblS1zmoVSmHe0ih6_FtV_yS_uq7D3bas4KF7I4kFimCGRyq-e-nxYOe9uqHK_072tZb9MZCIaG5RjL-0hRGab78PnLjbOHvzFFox65ZPbQ4Glz7s2gaLTd7b1odTCN5oy3azluRxkorbf-LAZp9SBMWC-zpZeKAUVtfyPKcePX3HVDSUUuEw",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://64.227.8.154:3000/client/1039290069?identificationType=CC",
+					"protocol": "http",
+					"host": [
+						"64",
+						"227",
+						"8",
+						"154"
+					],
+					"port": "3000",
+					"path": [
+						"client",
+						"1039290069"
+					],
+					"query": [
+						{
+							"key": "identificationType",
+							"value": "CC"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Eliminar cliente",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/client/1039290069?identificationType=CC",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"client",
+								"1039290069"
+							],
+							"query": [
+								{
+									"key": "identificationType",
+									"value": "CC"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Security-Policy",
+							"value": "default-src 'self';base-uri 'self';font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Resource-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Origin-Agent-Cluster",
+							"value": "?1"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "no-referrer"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=15552000; includeSubDomains"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-DNS-Prefetch-Control",
+							"value": "off"
+						},
+						{
+							"key": "X-Download-Options",
+							"value": "noopen"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "SAMEORIGIN"
+						},
+						{
+							"key": "X-Permitted-Cross-Domain-Policies",
+							"value": "none"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "67"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"43-PoCExBiS+gSvNwN5G1XjaJJPMMo\""
+						},
+						{
+							"key": "Vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 26 Jun 2023 21:08:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"code\": 200,\n    \"success\": true,\n    \"data\": \"Cliente eliminado exitosamente\"\n}"
+				}
+			]
+		}
+	]
+}

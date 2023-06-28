@@ -15,6 +15,7 @@ Se crea un API en NodeJS con Express, utilizando TypeORM para conectarse a la ba
 ![plot](./diagram.png)
 
 ***Se adjunta las historias de usuario en el archivo "historias de usuario.xlsx"***
+***Se adjunta la definición de Postman en el archivo "Clientes.postman_collection.json"***
 
 
 ## Correr el proyecto
